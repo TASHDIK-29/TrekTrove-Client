@@ -1,8 +1,11 @@
+import { Outlet } from "react-router-dom";
+import Nav from "../components/nav/Nav";
 
 const MainLayout = () => {
     return (
         <div>
-           <h1 className="text-3xl">Hello</h1> 
+            <Nav></Nav>
+           <Outlet></Outlet>
         </div>
     );
 };
