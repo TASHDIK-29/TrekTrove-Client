@@ -28,8 +28,8 @@ const Nav = () => {
             </div>
             <div className="navbar-end">
                 <div className="space-x-2">
-                <a className="btn">Login</a>
-                <a className="btn">Register</a>
+                <Link to = '/login' className="btn">Login</Link>
+                <Link to = '/register' className="btn">Register</Link>
                 </div>
             </div>
         </div>
