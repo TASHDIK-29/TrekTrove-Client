@@ -1,10 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import auth from "../../auth/firebase.config";
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const { createUser, logOutUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handelRegister = e => {
         e.preventDefault();
@@ -14,16 +17,26 @@ const Register = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
+        const photo = form.photo.value;
 
-        console.log(name, email, password);
+        console.log(name, email, password, photo);
 
         createUser(email, password)
-        .then(result => {
-            console.log(result.user);
-        })
-        .catch(err => {
-            console.log(err);
-        })
+            .then(result => {
+                console.log(result.user);
+                logOutUser();
+                navigate('/login');
+
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photo
+                })
+
+
+
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
 
@@ -68,7 +81,7 @@ const Register = () => {
                             <button className="btn bg-pink-800 hover:bg-pink-800 text-white font-bold">Register</button>
                         </div>
                     </form>
-                    <p className="text-center mb-2">Already have an account? please <Link to = '/login' className="text-rose-600 font-bold text-lg text-center">Login</Link></p>
+                    <p className="text-center mb-2">Already have an account? please <Link to='/login' className="text-rose-600 font-bold text-lg text-center">Login</Link></p>
                 </div>
             </div>
         </div>

@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form"
+import { AuthContext } from "../../auth/AuthProvider";
 
 const AddSpot = () => {
+
+    const {user} = useContext(AuthContext);
+    console.log(user.displayName);
 
     const {
         register,
@@ -94,14 +99,14 @@ const AddSpot = () => {
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label className="text-sm">User Name</label>
-                            <input type="text" placeholder="enter your name" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-700 font-semibold focus:dark:ring-violet-600 dark:border-gray-300 p-2"
+                            <input type="text" defaultValue={user.displayName} className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-700 font-semibold focus:dark:ring-violet-600 dark:border-gray-300 p-2"
                                 {...register("userName", { required: true })}
                             />
                             {errors.exampleRequired && <span className="text-red-600 font-bold text-base">This field is required</span>}
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label className="text-sm">Email</label>
-                            <input type="email" placeholder="enter visitors email" className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-700 font-semibold focus:dark:ring-violet-600 dark:border-gray-300 p-2"
+                            <input type="email" defaultValue={user.email} className="w-full rounded-md focus:ring focus:ring-opacity-75 dark:text-gray-700 font-semibold focus:dark:ring-violet-600 dark:border-gray-300 p-2"
                                 {...register("email", { required: true })}
                             />
                             {errors.exampleRequired && <span className="text-red-600 font-bold text-base">This field is required</span>}
