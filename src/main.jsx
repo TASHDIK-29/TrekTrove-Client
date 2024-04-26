@@ -13,12 +13,13 @@ import AddSpot from './pages/addSpot/AddSpot';
 import MyAdd from './pages/myAdd/MyAdd';
 import Home from './pages/home/Home';
 import DetailCard from './pages/details/DetailCard';
+import AuthProvider from './auth/AuthProvider';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    children:[
+    children: [
       {
         path: '/',
         element: <Home></Home>
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: '/allSpots/:id',
         element: <DetailCard></DetailCard>,
-        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/spots/${params.id}`)
       },
       {
         path: '/addSpots',
@@ -47,6 +48,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
