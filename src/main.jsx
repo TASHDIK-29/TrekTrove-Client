@@ -12,6 +12,7 @@ import AllSpots from './pages/allPosts/AllSpots';
 import AddSpot from './pages/addSpot/AddSpot';
 import MyAdd from './pages/myAdd/MyAdd';
 import Home from './pages/home/Home';
+import DetailCard from './pages/details/DetailCard';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
         path: '/allSpots',
         element: <AllSpots></AllSpots>,
         loader: () => fetch('http://localhost:5000/spots')
+      },
+      {
+        path: '/allSpots/:id',
+        element: <DetailCard></DetailCard>,
+        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
       },
       {
         path: '/addSpots',

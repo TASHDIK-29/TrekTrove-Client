@@ -1,11 +1,13 @@
-import { FaRegClock } from "react-icons/fa6";
+import { FaRegClock, FaPersonWalkingLuggage } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import { GiDeathStar } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 const SpotCard = ({spot}) => {
 
-    console.log(spot);
+    // console.log(spot);
 
-    const {visitorsPerYear, travelTime, spotName, seasonality, photo, avgCost} = spot;
+    const {visitorsPerYear, travelTime, spotName, seasonality, photo, avgCost, _id} = spot;
     return (
         <div className="rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
             <div className="relative">
@@ -23,13 +25,13 @@ const SpotCard = ({spot}) => {
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-3xl font-semibold tracking-wide">{spotName}</h2>
-                    <div className="flex justify-around">
-                        <h3 className="text-lg font-semibold">Seasonality : {seasonality}</h3>
-                        <h3 className="text-lg font-semibold">Visitors Per Year : {visitorsPerYear}</h3>
+                    <div className="flex flex-col justify-around">
+                        <h3 className="text-lg font-semibold flex items-center gap-2"><GiDeathStar className="text-rose-600"/>Seasonality : <span className="text-xl text-rose-600 font-bold">{seasonality}</span></h3>
+                        <h3 className="text-lg font-semibold flex items-center gap-2"><FaPersonWalkingLuggage className="text-rose-600" />Visitors Per Year : <span className="text-xl text-rose-600 font-bold">{visitorsPerYear}</span></h3>
                     </div>
                 </div>
                 <div className="flex justify-between items-center">
-                    <button type="button" className="w-1/3 flex items-center justify-center gap-2 p-3 font-bold tracking-wide rounded-md border-2 border-rose-600 hover:bg-rose-700 text-rose-600 hover:text-gray-50">Details<FaArrowRight /></button>
+                    <Link to = {`/allSpots/${_id}`} className="w-1/3 flex items-center justify-center gap-2 p-3 font-bold tracking-wide rounded-md border-2 border-rose-600 hover:bg-rose-700 text-rose-600 hover:text-gray-50">Details<FaArrowRight /></Link>
                     <h1 className="text-lg font-semibold">From <br />
                         <span className="text-2xl text-rose-600 font-bold">${avgCost}</span> per person</h1>
                 </div>
