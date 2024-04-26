@@ -16,6 +16,7 @@ import DetailCard from './pages/details/DetailCard';
 import AuthProvider from './auth/AuthProvider';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import PrivateRoute from './private/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -38,11 +39,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/addSpots',
-        element: <AddSpot></AddSpot>
+        element: <PrivateRoute><AddSpot></AddSpot></PrivateRoute>
       },
       {
-        path: '/myAdd',
-        element: <MyAdd></MyAdd>
+        path: '/myAdd/:email',
+        element: <PrivateRoute><MyAdd></MyAdd></PrivateRoute>
       },
       {
         path: '/login',

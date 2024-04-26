@@ -5,7 +5,7 @@ import { AuthContext } from "../../auth/AuthProvider";
 const AddSpot = () => {
 
     const {user} = useContext(AuthContext);
-    console.log(user.displayName);
+    // console.log(user.displayName);
 
     const {
         register,

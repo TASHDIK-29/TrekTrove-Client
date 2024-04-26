@@ -32,7 +32,7 @@ const Nav = () => {
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/allSpots'>All Spots</NavLink>
         <NavLink to='/addSpots'>Add Spots</NavLink>
-        <NavLink to='/myAdd'>My Add</NavLink>
+        <NavLink to={`/myAdd/${user?.email}`}>My Add</NavLink>
     </>
     return (
         <div className="navbar bg-base-100">
