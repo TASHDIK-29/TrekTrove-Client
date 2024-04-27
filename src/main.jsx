@@ -18,6 +18,7 @@ import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import PrivateRoute from './private/PrivateRoute';
 import UpdatePage from './pages/update/UpdatePage';
+import CountryDetails from './pages/countryDetail/CountryDetails';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/allSpots/:id',
-        element: <DetailCard></DetailCard>,
+        element: <PrivateRoute><DetailCard></DetailCard></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/spots/${params.id}`)
       },
       {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         path: '/update/:id',
         element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+      },
+      {
+        path: '/country/:country',
+        element: <CountryDetails></CountryDetails>,
       },
       {
         path: '/login',
