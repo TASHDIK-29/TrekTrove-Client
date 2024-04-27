@@ -1,13 +1,31 @@
-import { useContext } from "react";
-import { AuthContext } from "../../auth/AuthProvider";
+
+import { useEffect, useState } from "react";
+import Header from "../../components/header/Header";
+import TouristSpots from "../../components/touristSpot/TouristSpots";
+import { useLoaderData } from "react-router-dom";
+import Countries from "../../components/country/Countries";
 
 const Home = () => {
 
-    const {user} = useContext(AuthContext);
-    console.log(user);
+    const spots = useLoaderData();
+
+    const [countries, setCountries] = useState([]);
+    console.log(countries);
+
+    useEffect( () => {
+        fetch('http://localhost:5000/country')
+        .then(res => res.json())
+        .then(data => {
+            setCountries(data);
+        })
+    }, [])
+
+    
     return (
         <div>
-            <h1 className="text-3xl">Home</h1>
+            <Header></Header>
+            <TouristSpots spots={spots}></TouristSpots>
+            <Countries countries={countries}></Countries>
         </div>
     );
 };

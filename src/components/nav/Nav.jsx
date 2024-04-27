@@ -58,8 +58,8 @@ const Nav = () => {
                     {user ?
                         <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut}>
                             <img className="w-14 rounded-full mr-16" src={user.photoURL ? user.photoURL : noImg} alt="" />
-                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border rounded-lg p-4`}>
-                                <h1 className="text-xl font-semibold">{user.displayName}</h1>
+                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border rounded-lg p-4 z-50`}>
+                                <h1 className="text-xl text-red-500 font-semibold">{user.displayName}</h1>
                                 <hr />
                                 <Link onClick={handelLogout} to='/login' className="border py-1 px-3 text-rose-600 font-bold">Logout</Link>
                             </div>
