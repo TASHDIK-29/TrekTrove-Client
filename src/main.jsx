@@ -17,6 +17,7 @@ import AuthProvider from './auth/AuthProvider';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import PrivateRoute from './private/PrivateRoute';
+import UpdatePage from './pages/update/UpdatePage';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
       {
         path: '/myAdd/:email',
         element: <PrivateRoute><MyAdd></MyAdd></PrivateRoute>
+      },
+      {
+        path: '/update/:id',
+        element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
       },
       {
         path: '/login',

@@ -1,6 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../auth/AuthProvider";
 import { MdOutlineTipsAndUpdates, MdOutlineDeleteForever } from "react-icons/md";
+import 'react-tooltip/dist/react-tooltip.css'
+import { Tooltip } from 'react-tooltip'
+import { Link } from "react-router-dom";
+
 
 const MyAdd = () => {
 
@@ -63,8 +67,19 @@ const MyAdd = () => {
                                 <td>{spot.counter}</td>
                                 <td>{spot.avgCost}</td>
                                 <td>{spot.visitorsPerYear}</td>
-                                <td><button><MdOutlineTipsAndUpdates className="text-xl text-rose-600 font-bold" /></button></td>
-                                <td><button onClick={() => handelDelete(spot._id)}><MdOutlineDeleteForever className="text-xl text-rose-600 font-bold" /></button></td>
+                                <td>
+                                    <button>
+                                        <Link to={`/update/${spot._id}`}
+                                            data-tooltip-id="update" data-tooltip-content="Update"><MdOutlineTipsAndUpdates className="text-xl text-rose-600 font-bold" /></Link>
+                                        <Tooltip id="update"
+                                            place="top"
+                                        />
+                                    </button>
+                                </td>
+                                <td>
+                                    <button data-tooltip-id="delete" data-tooltip-content="Delete" onClick={() => handelDelete(spot._id)}><MdOutlineDeleteForever className="text-xl text-rose-600 font-bold" /></button>
+                                    <Tooltip id="delete" />
+                                </td>
                             </tr>)
                         }
                         {
