@@ -14,7 +14,7 @@ import { FaInstagramSquare, FaFacebookF, FaWhatsapp, FaTwitter } from "react-ico
 
 const Footer = () => {
     return (
-        <footer className="relative pt-16  dark:bg-gray-100 dark:text-gray-800 footer-container">
+        <footer className="relative pt-16  dark:bg-gray-100 dark:text-gray-800 footer-container mt-20">
             <div className="container grid grid-cols-2 mx-auto gap-x-5 gap-y-8 sm:grid-cols-3 md:grid-cols-6 mb-16">
                 <div className="flex flex-col space-y-4 col-span-2 p-5">
                     <p className="text-base font-semibold text-white">TrekTrove: Your gateway to unforgettable adventures. Explore breathtaking landscapes, immerse in diverse cultures, and create lasting memories with us.</p>
@@ -83,8 +83,10 @@ const Footer = () => {
                 <h1 className='col-span-2 text-white text-xl flex items-center justify-center gap-2'><MdMarkEmailUnread className='text-rose-600 text-2xl' /> info@trektrove.com</h1>
                 <h1 className='col-span-3 text-white text-xl flex items-center justify-center gap-2'><FaMapMarkerAlt className='text-rose-600 text-2xl' />  2752 Willison Street Eagan, United State</h1>
             </div>
-            <div className='absolute bottom-0 w-full h-14 bg-zinc-800'>
-
+            <div className='absolute bottom-0 w-full h-16 bg-zinc-800 grid grid-cols-3'>
+                <h1 className='text-white text-center my-auto' >© Copyright 1986. All Rights Reserved.</h1>
+                <h1 className='text-white text-center my-auto text-4xl font-semibold' >Trek<span className='text-rose-600 font-bold'>Trove</span></h1>
+                <a  className='text-white text-center my-auto' href="">Terms & Condition <span className='text-rose-600'>|</span> Privacy Policy</a>
             </div>
         </footer>
     );

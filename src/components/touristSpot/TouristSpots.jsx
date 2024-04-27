@@ -2,7 +2,7 @@ import SpotCard from "../spotCard/SpotCard";
 
 const TouristSpots = ({ spots }) => {
 
-    console.log(spots);
+    // console.log(spots);
 
     return (
         <div>

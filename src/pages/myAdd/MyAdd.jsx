@@ -9,16 +9,16 @@ import { Link } from "react-router-dom";
 const MyAdd = () => {
 
     const { user } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
     const [spots, setSpots] = useState([]);
-    console.log(spots);
+    // console.log(spots);
 
     useEffect(() => {
         fetch(`http://localhost:5000/myAdds/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setSpots(data);
             })
     }, [])

@@ -6,7 +6,8 @@ import noImg from "../../assets/user.png"
 const Nav = () => {
 
     const { user, logOutUser } = useContext(AuthContext);
-    // console.log(user.displayName);
+    console.log(user);
+
 
     const [hover, setHover] = useState(false);
     const handelMouseHover = () => {
@@ -35,7 +36,7 @@ const Nav = () => {
         <NavLink to={`/myAdd/${user?.email}`}>My Add</NavLink>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 mb-6">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -55,9 +56,9 @@ const Nav = () => {
             <div className="navbar-end">
                 {/* <div><h1>{user.email}</h1></div> */}
                 <div className="space-x-2">
-                    {user ?
-                        <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut}>
-                            <img className="w-14 rounded-full mr-16" src={user.photoURL ? user.photoURL : noImg} alt="" />
+                    { user ?
+                        <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut} className="w-16 h-16 mr-10">
+                            <img className="mx-auto my-auto w-14 rounded-full mr-16" src={user?.photoURL ? user?.photoURL : noImg} alt="" />
                             <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border rounded-lg p-4 z-50`}>
                                 <h1 className="text-xl text-red-500 font-semibold">{user.displayName ? user.displayName : "Username not found"}</h1>
                                 <hr />

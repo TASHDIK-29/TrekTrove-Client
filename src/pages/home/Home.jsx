@@ -4,13 +4,14 @@ import Header from "../../components/header/Header";
 import TouristSpots from "../../components/touristSpot/TouristSpots";
 import { useLoaderData } from "react-router-dom";
 import Countries from "../../components/country/Countries";
+import TourGuide from "../../components/guide/TourGuide";
 
 const Home = () => {
 
     const spots = useLoaderData();
 
     const [countries, setCountries] = useState([]);
-    console.log(countries);
+    // console.log(countries);
 
     useEffect( () => {
         fetch('http://localhost:5000/country')
@@ -26,6 +27,7 @@ const Home = () => {
             <Header></Header>
             <TouristSpots spots={spots}></TouristSpots>
             <Countries countries={countries}></Countries>
+            <TourGuide></TourGuide>
         </div>
     );
 };
