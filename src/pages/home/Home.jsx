@@ -5,6 +5,7 @@ import TouristSpots from "../../components/touristSpot/TouristSpots";
 import { useLoaderData } from "react-router-dom";
 import Countries from "../../components/country/Countries";
 import TourGuide from "../../components/guide/TourGuide";
+import Review from "../../components/review/Review";
 
 const Home = () => {
 
@@ -28,6 +29,7 @@ const Home = () => {
             <TouristSpots spots={spots}></TouristSpots>
             <Countries countries={countries}></Countries>
             <TourGuide></TourGuide>
+            <Review></Review>
         </div>
     );
 };

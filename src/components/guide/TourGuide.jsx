@@ -40,7 +40,7 @@ const TourGuide = () => {
             <h1 className="text-4xl font-bold text-center">Our Tour Guide</h1>
             <p className="text-base text-center w-1/2 mx-auto my-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia laudantium sint nam iure repellat rem doloremque quibusdam, itaque soluta numquam?</p>
 
-            <div className="mb-40 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-6">
+            <div className="mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-6">
                 <div className="relative rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800"
                     onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={handleMouseLeave}
                 >
