@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {
 
-    const {loginUser} = useContext(AuthContext);
+    const {loginUser, googleLogin, githubLogin} = useContext(AuthContext);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -26,6 +27,26 @@ const Login = () => {
             navigate(page);
         })
         .catch(err => {
+            console.log(err);
+        })
+    }
+
+    const handelGoogle = () => {
+        googleLogin()
+        .then(result =>{
+            navigate(page);
+        })
+        .catch(err =>{
+            console.log(err);
+        })
+    }
+
+    const handelGitHub = () => {
+        githubLogin()
+        .then(result =>{
+            navigate(page);
+        })
+        .catch(err =>{
             console.log(err);
         })
     }
@@ -62,6 +83,9 @@ const Login = () => {
                             <button className="btn bg-pink-800 hover:bg-pink-800 text-white font-bold">Login</button>
                         </div>
                     </form>
+                    <button onClick={handelGoogle} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-blue-600"><FaGoogle className="text-blue-600" />Sing in With Google</button>
+                    <button onClick={handelGitHub} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-gray-600"><FaGithub className="text-gray-600" />Sing in With Github</button>
+                    
                     <p className="text-center mb-2">Have no account? please <Link to='/register' className="text-rose-600 font-bold text-lg text-center">Register</Link></p>
                 </div>
             </div>
