@@ -19,10 +19,12 @@ import Register from './pages/register/Register';
 import PrivateRoute from './private/PrivateRoute';
 import UpdatePage from './pages/update/UpdatePage';
 import CountryDetails from './pages/countryDetail/CountryDetails';
+import Error from './pages/err/Error';
 
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement: <Error></Error>,
     element: <MainLayout></MainLayout>,
     children: [
       {
