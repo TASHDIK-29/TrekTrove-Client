@@ -9,13 +9,13 @@
     height: 100vh;
 }
 .banner-container2 {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../assets/slider1.png');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../assets/slider2.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
 .banner-container3 {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../assets/slider1.png');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../assets/slider3.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;

@@ -4,6 +4,25 @@ import { AuthContext } from "../../auth/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../auth/firebase.config";
 
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import "swiper/css/bundle";
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
+
+import slider1 from '../../assets/footerPic1-1.jpg'
+import slider2 from '../../assets/footerPic2-1.jpg'
+import slider3 from '../../assets/footerPic3-1.jpg'
+import slider4 from '../../assets/footerPic4-1.jpg'
+import slider5 from '../../assets/footerPic5-1.jpg'
+
+import './regSwiper.css'
+
+
+
+
 const Register = () => {
 
     const { createUser, logOutUser } = useContext(AuthContext);
@@ -41,17 +60,50 @@ const Register = () => {
 
 
     return (
-        <div className=" min-h-screen bg-base-200">
-            <div className="text-center">
-                <h1 className="text-5xl font-bold">Register Now!</h1>
-                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            </div>
-            <div className="flex flex-col lg:flex-row-reverse gap-10 border">
-                <div className="text-center w-1/2 border">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+        <div className=" min-h-screen">
+
+            <div className="flex flex-col lg:flex-row-reverse gap-10">
+                <div className="text-center w-1/2">
+                    <Swiper
+                        effect={'coverflow'}
+                        centeredSlides={true}
+                        slidesPerView={'auto'}
+                        coverflowEffect={{
+                            rotate: 50,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        }}
+                        modules={[EffectCoverflow, Autoplay]}
+                        loop={true}
+                        autoplay={{
+                            delay: 2000,
+                        }}
+                        className="swiper"
+                    >
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider1} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider2} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider3} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider4} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider5} />
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
-                <div className="card shrink-0 w-2/5 shadow-2xl bg-base-100 border">
+                <div className="card shrink-0 w-2/5 p-4 border border-rose-600 rounded-md  bg-base-100 ">
+                    <div className="text-center mb-8">
+                        <h1 className="text-5xl font-bold text-rose-600">Register Now!</h1>
+                    </div>
+                    <hr />
                     <form onSubmit={handelRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">

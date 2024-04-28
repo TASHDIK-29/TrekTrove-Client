@@ -4,6 +4,21 @@ import { AuthContext } from "../../auth/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import "swiper/css/bundle";
+import { EffectCoverflow, Autoplay } from 'swiper/modules';
+
+import slider1 from '../../assets/footerPic1-1.jpg'
+import slider2 from '../../assets/footerPic2-1.jpg'
+import slider3 from '../../assets/footerPic3-1.jpg'
+import slider4 from '../../assets/footerPic4-1.jpg'
+import slider5 from '../../assets/footerPic5-1.jpg'
+
+import './swiper.css'
+
 const Login = () => {
 
     const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
@@ -53,17 +68,51 @@ const Login = () => {
 
 
     return (
-        <div className=" min-h-screen bg-base-200">
-            <div className="text-center">
-                <h1 className="text-5xl font-bold">Login Now!</h1>
-                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-            </div>
-            <div className="flex flex-col lg:flex-row-reverse gap-10 border">
-                <div className="text-center w-1/2 border">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
-                    <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+        <div className=" min-h-screen">
+
+            <div className="flex flex-col lg:flex-row-reverse gap-10 p-6">
+                <div className="text-center w-1/2">
+                    <Swiper
+                        effect={'coverflow'}
+                        centeredSlides={true}
+                        slidesPerView={'auto'}
+                        coverflowEffect={{
+                            rotate: 50,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        }}
+                        modules={[EffectCoverflow, Autoplay]}
+                        loop={true}
+                        autoplay={{
+                            delay: 2000,
+                        }}
+                        className="swiper"
+                    >
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider1} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider2} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider3} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider4} />
+                        </SwiperSlide>
+                        <SwiperSlide className="swiper-slide">
+                            <img src={slider5} />
+                        </SwiperSlide>
+                    </Swiper>
                 </div>
-                <div className="card shrink-0 w-2/5 shadow-2xl bg-base-100 border">
+                <div className="card shrink-0 w-2/5 p-3 border border-rose-400 rounded-md  bg-base-100">
+                    <div className="text-center mb-8">
+                        <h1 className="text-5xl font-bold text-rose-600">Login Now!</h1>
+                        
+                    </div>
+                    <hr />
                     <form onSubmit={handelLogin} className="card-body">
 
                         <div className="form-control">
@@ -85,7 +134,7 @@ const Login = () => {
                     </form>
                     <div className="md:flex justify-between">
                         <button onClick={handelGoogle} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-blue-600 mb-3"><FaGoogle className="text-blue-600" />Sing in With Google</button>
-                        <button onClick={handelGitHub} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-gray-600 mb-3"><FaGithub className="text-gray-600" />Sing in With Github</button>
+                        <button onClick={handelGitHub} className="border border-gray-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-gray-600 mb-3"><FaGithub className="text-gray-600" />Sing in With Github</button>
                     </div>
 
                     <p className="text-center mb-2">Have no account? please <Link to='/register' className="text-rose-600 font-bold text-lg text-center">Register</Link></p>
