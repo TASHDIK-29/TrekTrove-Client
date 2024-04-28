@@ -39,8 +39,8 @@ const AddSpot = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
                     <div className="space-y-2 col-span-full lg:col-span-1">
-                        <p className="font-medium">Personal Inormation</p>
-                        <p className="text-xs">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci fuga autem eum!</p>
+                        <p className="font-medium">HEY , <span className="text-3xl font-bold text-rose-600">{user.displayName}</span></p>
+                        <p className="text-lg font-semibold text-slate-400">Be careful in terms of adding new spots here and always try to update your data with time. Thank you for your contribution.</p>
                     </div>
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                         <div className="col-span-full sm:col-span-3">
@@ -122,7 +122,7 @@ const AddSpot = () => {
                             ></textarea>
                             {errors.exampleRequired && <span className="text-red-600 font-bold text-base">This field is required</span>}
                         </div>
-                        <button className="col-span-full border bg-neutral-700 text-white font-bold py-1 rounded-md">Add Spot</button>
+                        <button className="col-span-full border bg-neutral-700 text-white font-bold py-2 rounded-md">Add Spot</button>
                     </div>
                 </fieldset>
                 {/* <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">

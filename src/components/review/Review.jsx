@@ -15,16 +15,13 @@ const Review = () => {
         <div className="review-container">
             <div className="text-left pl-12 pt-12 mb-12">
                 <h1 className="text-4xl font-bold text-white">What Our Client Say About Us</h1>
-                <p className="w-2/5 mt-3 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo necessitatibus vero repellendus nisi quos molestias pariatur ratione perspiciatis. Quia, facilis?</p>
+                <p className="w-2/5 mt-3 text-white">Hey there! We'd love to hear your latest adventures. Share your story on our website and inspire others with your experiences!</p>
             </div>
             <div className="w-10/12 mx-auto">
                 <Swiper
 
                     slidesPerView={1}
                     spaceBetween={10}
-                    pagination={{
-                        clickable: true,
-                    }}
                     breakpoints={{
                         640: {
                             slidesPerView: 1,
@@ -48,13 +45,13 @@ const Review = () => {
 
                 >
                     <SwiperSlide className="">
-                        <div className=" rounded-xl p-6 relative bg-slate-300/25">
+                        <div className=" rounded-xl p-6 relative bg-slate-300/25 flex flex-col">
                             <div className="relative h-24 ">
                                 <div className="absolute -top-6 left-24 w-28 h-28 rounded-full ">
                                     <img className="w-full h-full rounded-full " src={img1} alt="" />
                                 </div>
                             </div>
-                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3 flex-grow">Absolutely breathtaking! The Sundarbans tour was an adventure of a lifetime. Our guide was knowledgeable, and the boat rides added an extra thrill. Highly recommend for nature enthusiasts!</p>
 
                             <div className="flex justify-between items-center px-1">
                                 <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>
@@ -69,13 +66,13 @@ const Review = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className=" rounded-xl p-6 relative  bg-slate-300/25">
+                        <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
                             <div className="relative h-24">
                                 <div className="absolute -top-6 left-24 w-28 h-28 rounded-full">
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
-                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3 flex-grow">Cox's Bazar exceeded all expectations! The pristine beach, vibrant culture, and delicious seafood made for an unforgettable trip. Perfect for relaxation and exploration. Can't wait to return!</p>
 
                             <div className="flex justify-between items-center px-1">
                                 <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>
@@ -90,13 +87,13 @@ const Review = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className=" rounded-xl p-6 relative  bg-slate-300/25">
+                        <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
                             <div className="relative h-24">
                                 <div className="absolute -top-6 left-24 w-28 h-28 rounded-full">
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
-                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3 flex-grow">Rangamati's serene beauty stole my heart. The tranquil lakes, lush hills made for a truly peaceful escape. A must-visit for anyone seeking tranquility amidst nature's wonders.</p>
 
                             <div className="flex justify-between items-center px-1">
                                 <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>
@@ -111,13 +108,13 @@ const Review = () => {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className=" rounded-xl p-6 relative  bg-slate-300/25">
+                        <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
                             <div className="relative h-24">
                                 <div className="absolute -top-6 left-24 w-28 h-28 rounded-full">
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
-                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3 flex-grow">Kuakata's sunset views were simply magical! The long beach, fresh seafood made our stay unforgettable. A hidden gem for those seeking beauty off the beaten path.</p>
 
                             <div className="flex justify-between items-center px-1">
                                 <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>

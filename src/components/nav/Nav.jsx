@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
 import noImg from "../../assets/user.png"
-import Toggle from "../dark/Toggle";
+// import Toggle from "../dark/Toggle";
 
 const Nav = () => {
 
@@ -37,7 +37,7 @@ const Nav = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to={`/myAdd/${user?.email}`}>My Add</NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 mb-6 mt-2">
+        <div className="navbar bg-base-100 mb-0 mt-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,10 +56,10 @@ const Nav = () => {
             </div>
             <div className="navbar-end">
                 {/* <div><h1>{user.email}</h1></div> */}
-                <div className="space-x-2 flex items-center justify-between">
-                    <div>
+                <div className="space-x-2 flex items-center justify-center">
+                    {/* <div>
                         <Toggle></Toggle>
-                    </div>
+                    </div> */}
                     { user ?
                         <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut} className="w-16 h-16 mr-10">
                             <img className="mx-auto my-auto w-14 rounded-full mr-16" src={user?.photoURL ? user?.photoURL : noImg} alt="" />

@@ -131,7 +131,7 @@ const UpdatePage = () => {
                             ></textarea>
                             {errors.exampleRequired && <span className="text-red-600 font-bold text-base">This field is required</span>}
                         </div>
-                        <button className="col-span-full border bg-neutral-700 text-white font-bold py-1 rounded-md">Update</button>
+                        <button className="col-span-full border bg-neutral-700 text-white font-bold py-2 rounded-md">Update</button>
                     </div>
                 </fieldset>
             </form>

@@ -20,19 +20,19 @@ const DetailCard = () => {
                         </p>
                     </div>
                     <div className="dark:text-gray-800">
-                        <p>{description}</p>
+                        <p className="text-lg font-normal">{description}</p>
                     </div>
                     <div className="flex justify-around">
-                        <h3>Average Cost : {avgCost}</h3>
-                        <h3>Seasonality : {seasonality}</h3>
+                        <h3 className="text-base font-medium">Average Cost : <span className="text-xl font-bold text-rose-600">{avgCost}</span> TK</h3>
+                        <h3 className="text-base font-medium">Seasonality : <span className="text-xl font-bold text-rose-600">{seasonality}</span></h3>
                     </div>
                     <div className="flex justify-around">
-                        <h3>Visitors : {visitorsPerYear} per year</h3>
-                        <h3>Travel Time : {travelTime}</h3>
+                        <h3>Visitors : <span className="text-xl font-bold text-rose-600">{visitorsPerYear}</span> per year</h3>
+                        <h3>Travel Time : <span className="text-xl font-bold text-rose-600">{travelTime}</span></h3>
                     </div>
                     <div>
-                        <h3>Added by : {userName}</h3>
-                        <h3>Email : {email}</h3>
+                        <h3 className="text-lg font-semibold">Added by : <span className="text-xl font-bold text-rose-600">{userName}</span></h3>
+                        <h3 className="text-lg font-semibold">Email : <span className="text-xl font-bold text-rose-600">{email}</span></h3>
                     </div>
                 </div>
             </div>

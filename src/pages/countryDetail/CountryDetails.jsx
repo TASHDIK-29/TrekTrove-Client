@@ -22,7 +22,7 @@ const CountryDetails = () => {
 
     return (
         <div>
-            <h1 className="text-4xl font-bold text-center mt-16 mb-12">Tourists Spots in {country}</h1>
+            <h1 className="text-4xl font-bold text-center mt-16 mb-12">Tourists Spots in <span className="text-rose-600">{country}</span></h1>
             <div className="grid grid-cols-3 gap-6 my-10">
                 {
                     spots.map(spot => <SpotCard key={spot._id} spot={spot}></SpotCard>)
