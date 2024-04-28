@@ -8,14 +8,14 @@ import "swiper/css";
 import "swiper/css/bundle";
 import { Autoplay } from 'swiper/modules';
 
-
+import './review.css'
 
 const Review = () => {
     return (
-        <div className="">
+        <div className="review-container">
             <div className="text-left pl-12 pt-12 mb-12">
-                <h1 className="text-4xl font-bold">What Our Client Say About Us</h1>
-                <p className="w-2/5 mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo necessitatibus vero repellendus nisi quos molestias pariatur ratione perspiciatis. Quia, facilis?</p>
+                <h1 className="text-4xl font-bold text-white">What Our Client Say About Us</h1>
+                <p className="w-2/5 mt-3 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo necessitatibus vero repellendus nisi quos molestias pariatur ratione perspiciatis. Quia, facilis?</p>
             </div>
             <div className="w-10/12 mx-auto">
                 <Swiper
@@ -54,10 +54,10 @@ const Review = () => {
                                     <img className="w-full h-full rounded-full " src={img1} alt="" />
                                 </div>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
 
-                            <div className="flex justify-between items-center px-3">
-                                <h1 className="text-2xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-500">Traveler</span></h1>
+                            <div className="flex justify-between items-center px-1">
+                                <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>
                                 <div className="space-x-2 flex gap-2">
                                     <FaStar className="text-rose-600" />
                                     <FaStar className="text-rose-600" />
@@ -75,10 +75,10 @@ const Review = () => {
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
 
-                            <div className="flex justify-between items-center px-3">
-                                <h1 className="text-2xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-500">Traveler</span></h1>
+                            <div className="flex justify-between items-center px-1">
+                                <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>
                                 <div className="space-x-2 flex gap-2">
                                     <FaStar className="text-rose-600" />
                                     <FaStar className="text-rose-600" />
@@ -96,10 +96,10 @@ const Review = () => {
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
 
-                            <div className="flex justify-between items-center px-3">
-                                <h1 className="text-2xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-500">Traveler</span></h1>
+                            <div className="flex justify-between items-center px-1">
+                                <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>
                                 <div className="space-x-2 flex gap-2">
                                     <FaStar className="text-rose-600" />
                                     <FaStar className="text-rose-600" />
@@ -117,10 +117,10 @@ const Review = () => {
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
+                            <p className="text-white mb-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam assumenda odio explicabo fuga suscipit corrupti recusandae cum ea corporis eius!</p>
 
-                            <div className="flex justify-between items-center px-3">
-                                <h1 className="text-2xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-500">Traveler</span></h1>
+                            <div className="flex justify-between items-center px-1">
+                                <h1 className="text-xl font-bold text-rose-600">Adam Groff <br /> <span className="text-lg font-medium text-gray-400">Traveler</span></h1>
                                 <div className="space-x-2 flex gap-2">
                                     <FaStar className="text-rose-600" />
                                     <FaStar className="text-rose-600" />

@@ -31,13 +31,13 @@ const Nav = () => {
     }
 
     const navLinks = <>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/allSpots'>All Spots</NavLink>
-        <NavLink to='/addSpots'>Add Spots</NavLink>
-        <NavLink to={`/myAdd/${user?.email}`}>My Add</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to='/'>Home</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to='/allSpots'>All Spots</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to='/addSpots'>Add Spots</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to={`/myAdd/${user?.email}`}>My Add</NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 mb-6">
+        <div className="navbar bg-base-100 mb-6 mt-2">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,7 +47,7 @@ const Nav = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost text-xl">TrekTrove</Link>
+                <Link to='/' className=" text-4xl font-semibold">Trek<span className="text-4xl text-rose-600 font-bold">Trove</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-6">
@@ -79,12 +79,12 @@ const Nav = () => {
                                 <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-rose-700 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
                             </Link>
                             <Link to='/register' className="relative inline-block text-lg group">
-                                <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-rose-800 transition-colors duration-300 ease-out border-2 border-rose-900 rounded-lg group-hover:text-white">
+                                <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-rose-800 transition-colors duration-300 ease-out border-2 border-rose-700 rounded-lg group-hover:text-white">
                                     <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-rose-50"></span>
-                                    <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-rose-900 group-hover:-rotate-180 ease"></span>
+                                    <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-rose-700 group-hover:-rotate-180 ease"></span>
                                     <span className="relative">Register</span>
                                 </span>
-                                <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-rose-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+                                <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-rose-700 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
                             </Link>
                         </div>
 

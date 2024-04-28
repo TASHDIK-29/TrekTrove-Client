@@ -37,8 +37,8 @@ const TourGuide = () => {
 
     return (
         <div className="mt-20">
-            <h1 className="text-4xl font-bold text-center">Our Tour Guide</h1>
-            <p className="text-base text-center w-1/2 mx-auto my-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia laudantium sint nam iure repellat rem doloremque quibusdam, itaque soluta numquam?</p>
+            <h1 className="text-4xl font-bold text-center mb-4">Our Tour Guide</h1>
+            <p className="w-1/2 text-center mx-auto mb-10 text-lg font-normal">Our expert guides lead you through each destination, offering insights, safety, and memorable experiences every step of the way.</p>
 
             <div className="mb-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-6">
                 <div className="relative rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800"
