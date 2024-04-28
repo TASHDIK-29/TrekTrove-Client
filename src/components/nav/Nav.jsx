@@ -9,7 +9,7 @@ import { LuLogOut } from "react-icons/lu";
 const Nav = () => {
 
     const { user, logOutUser } = useContext(AuthContext);
-    console.log(user);
+    // console.log(user);
 
 
     const [hover, setHover] = useState(false);
@@ -39,13 +39,13 @@ const Nav = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to={`/myAdd/${user?.email}`}>My List</NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 mb-0 mt-2">
-            <div className="navbar-start">
+        <div className="navbar bg-base-100 mb-0 mt-2 flex flex-col md:flex-row">
+            <div className="navbar-start w-full md:w-3/5">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52  z-50">
                         {navLinks}
                     </ul>
                 </div>
@@ -56,7 +56,7 @@ const Nav = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end  w-full md:w-2/3 flex justify-center md:justify-end space-y-2">
                 {/* <div><h1>{user.email}</h1></div> */}
                 <div className="space-x-2 flex items-center justify-center">
 

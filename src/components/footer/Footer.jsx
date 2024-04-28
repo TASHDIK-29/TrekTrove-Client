@@ -15,7 +15,7 @@ import { FaInstagramSquare, FaFacebookF, FaWhatsapp, FaTwitter } from "react-ico
 const Footer = () => {
     return (
         <footer className="relative pt-16  dark:bg-gray-100 dark:text-gray-800 footer-container mt-20">
-            <div className="container grid grid-cols-2 mx-auto gap-x-5 gap-y-8 sm:grid-cols-3 md:grid-cols-6 mb-16">
+            <div className="container grid grid-cols-2 mx-auto gap-x-5 gap-y-8 sm:grid-cols-3 md:grid-cols-6 mb-16 p-2">
                 <div className="flex flex-col space-y-4 col-span-2 p-5">
                     <p className="text-base font-semibold text-white">TrekTrove: Your gateway to unforgettable adventures. Explore breathtaking landscapes, immerse in diverse cultures, and create lasting memories with us.</p>
                     <h1 className="text-2xl font-semibold text-white">FOLLOW ON US :</h1>
@@ -71,19 +71,18 @@ const Footer = () => {
 
                 </div>
             </div>
-            {/* <div className="flex items-center justify-center px-6 pt-12 text-sm">
-                <span className="dark:text-gray-600">© Copyright 1986. All Rights Reserved.</span>
-            </div> */}
+            
             <div className='px-16'>
                 <hr />
             </div>
-            <div className='grid grid-cols-8 mt-12 px-16'>
-                <h1 className='col-span-1 text-white flex items-center gap-2 text-2xl font-bold'>Contact Us :</h1>
-                <h1 className='col-span-2 text-white text-xl flex items-center justify-center gap-2'><FaPhoneAlt className='text-rose-600' /> +1593-648-96</h1>
-                <h1 className='col-span-2 text-white text-xl flex items-center justify-center gap-2'><MdMarkEmailUnread className='text-rose-600 text-2xl' /> info@trektrove.com</h1>
-                <h1 className='col-span-3 text-white text-xl flex items-center justify-center gap-2'><FaMapMarkerAlt className='text-rose-600 text-2xl' />  2752 Willison Street Eagan, United State</h1>
+
+            <div className='grid grid-cols-1 lg:grid-cols-8 md:px-16 py-3'>
+                <h1 className=' lg:col-span-1 text-white flex justify-center items-center gap-2 text-2xl font-bold'>Contact Us :</h1>
+                <h1 className='lg:col-span-2 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-0 gap-2'><FaPhoneAlt className='text-rose-600' /> +1593-648-96</h1>
+                <h1 className=' lg:col-span-2 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-0 gap-2'><MdMarkEmailUnread className='text-rose-600 text-2xl w-10' /> info@trektrove.com</h1>
+                <h1 className='lg:col-span-3 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-0 gap-2'><FaMapMarkerAlt className='text-rose-600 text-2xl' />  2752 Willison Street Eagan, United State</h1>
             </div>
-            <div className='absolute bottom-0 w-full h-16 bg-zinc-800 grid grid-cols-3'>
+            <div className='absolute md:bottom-0 w-full h-28 md:h-16 bg-zinc-800 grid grid-cols-1 lg:grid-cols-3'>
                 <h1 className='text-white text-center my-auto' >© Copyright 1986. All Rights Reserved.</h1>
                 <h1 className='text-white text-center my-auto text-4xl font-semibold' >Trek<span className='text-rose-600 font-bold'>Trove</span></h1>
                 <a  className='text-white text-center my-auto' href="">Terms & Condition <span className='text-rose-600'>|</span> Privacy Policy</a>

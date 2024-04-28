@@ -13,9 +13,9 @@ import './review.css'
 const Review = () => {
     return (
         <div className="review-container">
-            <div className="text-left pl-12 pt-12 mb-12">
+            <div className="text-left pl-12 pt-12 md:mb-12">
                 <h1 className="text-4xl font-bold text-white">What Our Client Say About Us</h1>
-                <p className="w-2/5 mt-3 text-white">Hey there! We'd love to hear your latest adventures. Share your story on our website and inspire others with your experiences!</p>
+                <p className="md:w-2/5 mt-3 text-white">Hey there! We'd love to hear your latest adventures. Share your story on our website and inspire others with your experiences!</p>
             </div>
             <div className="w-10/12 mx-auto">
                 <Swiper
@@ -46,8 +46,8 @@ const Review = () => {
                 >
                     <SwiperSlide className="">
                         <div className=" rounded-xl p-6 relative bg-slate-300/25 flex flex-col">
-                            <div className="relative h-24 ">
-                                <div className="absolute -top-6 left-24 w-28 h-28 rounded-full ">
+                            <div className="relative h-20 ">
+                                <div className="absolute -top-6 left-24 w-24 h-24 rounded-full ">
                                     <img className="w-full h-full rounded-full " src={img1} alt="" />
                                 </div>
                             </div>
@@ -67,8 +67,8 @@ const Review = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
-                            <div className="relative h-24">
-                                <div className="absolute -top-6 left-24 w-28 h-28 rounded-full">
+                            <div className="relative h-20">
+                                <div className="absolute -top-6 left-24 w-24 h-24 rounded-full">
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
@@ -88,8 +88,8 @@ const Review = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
-                            <div className="relative h-24">
-                                <div className="absolute -top-6 left-24 w-28 h-28 rounded-full">
+                            <div className="relative h-20">
+                                <div className="absolute -top-6 left-24 w-24 h-24 rounded-full">
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>
@@ -109,8 +109,8 @@ const Review = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
-                            <div className="relative h-24">
-                                <div className="absolute -top-6 left-24 w-28 h-28 rounded-full">
+                            <div className="relative h-20">
+                                <div className="absolute -top-6 left-24 w-24 h-24 rounded-full">
                                     <img className="w-full h-full rounded-full" src={img1} alt="" />
                                 </div>
                             </div>

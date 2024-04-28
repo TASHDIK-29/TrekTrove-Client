@@ -11,7 +11,7 @@ const DetailCard = () => {
     return (
         <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">
             <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
-                <img src={photo} />
+                <img className="h-64 md:h-96" src={photo} />
                 <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">
                     <div className="space-y-2">
                         <h1 className="inline-block text-2xl font-semibold sm:text-3xl">{spotName} ,{counter}</h1>
@@ -22,11 +22,11 @@ const DetailCard = () => {
                     <div className="dark:text-gray-800">
                         <p className="text-lg font-normal">{description}</p>
                     </div>
-                    <div className="flex justify-around">
+                    <div className="md:flex justify-around">
                         <h3 className="text-base font-medium">Average Cost : <span className="text-xl font-bold text-rose-600">{avgCost}</span> TK</h3>
                         <h3 className="text-base font-medium">Seasonality : <span className="text-xl font-bold text-rose-600">{seasonality}</span></h3>
                     </div>
-                    <div className="flex justify-around">
+                    <div className="md:flex justify-around">
                         <h3>Visitors : <span className="text-xl font-bold text-rose-600">{visitorsPerYear}</span> per year</h3>
                         <h3>Travel Time : <span className="text-xl font-bold text-rose-600">{travelTime}</span></h3>
                     </div>

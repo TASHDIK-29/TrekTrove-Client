@@ -16,14 +16,14 @@ const AllSpots = () => {
           fetch('https://assignment-10-server-rho-nine.vercel.app/sort')
           .then(res => res.json())
           .then(data => {
-            console.log('sorted', data);
+            // console.log('sorted', data);
             setSortedSpots(data);
           })  
     }, [])
 
     const spots = useLoaderData();
 
-    console.log(spots);
+    // console.log(spots);
     return (
         <div>
             <div className="flex flex-col justify-center items-center">
@@ -35,7 +35,7 @@ const AllSpots = () => {
                     </ul>
                 </div>
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
                 { toggle ?
                     sortedSpots.map(spot => <SpotCard key={spot._id} spot={spot}></SpotCard>)
                     : spots.map(spot => <SpotCard key={spot._id} spot={spot}></SpotCard>)
