@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
 import noImg from "../../assets/user.png"
+import toast from "react-hot-toast";
+import { LuLogOut } from "react-icons/lu";
 // import Toggle from "../dark/Toggle";
 
 const Nav = () => {
@@ -23,7 +25,7 @@ const Nav = () => {
         setHover(false);
         logOutUser()
             .then(() => {
-                alert('Logged out');
+                toast.success('Logged out');
             })
             .catch(err => {
                 console.log(err);
@@ -57,16 +59,17 @@ const Nav = () => {
             <div className="navbar-end">
                 {/* <div><h1>{user.email}</h1></div> */}
                 <div className="space-x-2 flex items-center justify-center">
-                    {/* <div>
-                        <Toggle></Toggle>
-                    </div> */}
-                    { user ?
+
+                    {user ?
                         <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut} className="w-16 h-16 mr-10">
                             <img className="mx-auto my-auto w-14 rounded-full mr-16" src={user?.photoURL ? user?.photoURL : noImg} alt="" />
-                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border rounded-lg p-4 z-50`}>
+                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border border-rose-500 rounded-lg p-4 z-50`}>
                                 <h1 className="text-xl text-red-500 font-semibold">{user.displayName ? user.displayName : "Username not found"}</h1>
-                                <hr />
-                                <Link onClick={handelLogout} to='/login' className="border py-1 px-3 text-rose-600 font-bold">Logout</Link>
+                                <hr className="mb-6" />
+                                <Link to='/login' className="flex items-center mt-4">
+                                    <button onClick={handelLogout} className=" py-2 px-4 text-rose-600 font-bold">Logout</button>
+                                    <LuLogOut className="text-rose-600 font-bold" />
+                                </Link>
                             </div>
                         </div>
                         : <div className="space-x-4">

@@ -18,6 +18,7 @@ import slider4 from '../../assets/footerPic4-1.jpg'
 import slider5 from '../../assets/footerPic5-1.jpg'
 
 import './swiper.css'
+import toast from "react-hot-toast";
 
 const Login = () => {
 
@@ -40,11 +41,13 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 navigate(page);
-                alert('Login Successful');
+
+                toast.success('Login Successful')
             })
             .catch(err => {
                 console.log(err);
                 alert('auth/invalid-credential')
+                toast.error('auth/invalid-credential')
             })
     }
 
@@ -52,6 +55,7 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 navigate(page);
+                toast.success('Login Successful')
             })
             .catch(err => {
                 console.log(err);
@@ -65,6 +69,7 @@ const Login = () => {
             })
             .catch(err => {
                 console.log(err);
+                toast.success('Login Successful')
             })
     }
 
@@ -135,8 +140,8 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="md:flex justify-between">
-                        <button onClick={handelGoogle} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-blue-600 mb-3"><FaGoogle className="text-blue-600" />Sing in With Google</button>
-                        <button onClick={handelGitHub} className="border border-gray-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-gray-600 mb-3"><FaGithub className="text-gray-600" />Sing in With Github</button>
+                        <button onClick={handelGoogle} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-blue-600 mb-3"><FaGoogle className="text-blue-600" />Sign in With Google</button>
+                        <button onClick={handelGitHub} className="border border-gray-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-gray-600 mb-3"><FaGithub className="text-gray-600" />Sign in With Github</button>
                     </div>
 
                     <p className="text-center mb-2">Have no account? please <Link to='/register' className="text-rose-600 font-bold text-lg text-center">Register</Link></p>

@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../auth/AuthProvider";
+import Swal from "sweetalert2";
 
 const AddSpot = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     // console.log(user.displayName);
 
     const {
@@ -14,7 +15,7 @@ const AddSpot = () => {
     } = useForm()
 
     const onSubmit = (spot) => {
-        
+
         const intAvgCost = parseInt(spot.avgCost);
         spot.intAvgCost = intAvgCost;
 
@@ -22,19 +23,44 @@ const AddSpot = () => {
 
         fetch('https://assignment-10-server-rho-nine.vercel.app/spots', {
             method: "POST",
-            headers:{
+            headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(spot)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
 
-            if(data.insertedId){
-                alert('Added successfully')
-            }
-        })
+                if (data.insertedId) {
+                    // alert('Added successfully')
+
+
+
+                    let timerInterval;
+                    Swal.fire({
+                        title: "Adding in your List",
+                        html: "Spot will add in <b></b> milliseconds.",
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading();
+                            const timer = Swal.getPopup().querySelector("b");
+                            timerInterval = setInterval(() => {
+                                timer.textContent = `${Swal.getTimerLeft()}`;
+                            }, 100);
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval);
+                        }
+                    }).then((result) => {
+                        /* Read more about handling dismissals below */
+                        if (result.dismiss === Swal.DismissReason.timer) {
+                            console.log("I was closed by the timer");
+                        }
+                    });
+                }
+            })
     }
 
 
@@ -43,7 +69,7 @@ const AddSpot = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
                     <div className="space-y-2 col-span-full lg:col-span-1">
-                        <p className="font-medium">HEY , <span className="text-3xl font-bold text-rose-600">{user.displayName}</span></p>
+                        <p className="font-medium">HEY , <span className="text-3xl font-bold text-rose-600">{user?.displayName}</span></p>
                         <p className="text-lg font-semibold text-slate-400">Be careful in terms of adding new spots here and always try to update your data with time. Thank you for your contribution.</p>
                     </div>
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">

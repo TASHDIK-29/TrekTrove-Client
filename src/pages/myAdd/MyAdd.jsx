@@ -4,6 +4,7 @@ import { MdOutlineTipsAndUpdates, MdOutlineDeleteForever } from "react-icons/md"
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyAdd = () => {
@@ -25,25 +26,48 @@ const MyAdd = () => {
 
 
     const handelDelete = id => {
-        fetch(`https://assignment-10-server-rho-nine.vercel.app/spots/${id}`, {
-            method: "DELETE"
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount) {
-                    const remaining = spots.filter(spot => spot._id !== id);
-                    setSpots(remaining);
 
-                    alert('Deleted');
-                }
-            })
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`https://assignment-10-server-rho-nine.vercel.app/spots/${id}`, {
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount) {
+                            const remaining = spots.filter(spot => spot._id !== id);
+                            setSpots(remaining);
+
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your spot has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
+
+
+
+            }
+        });
+        
 
     }
 
     return (
         <div>
-            <h1 className="text-3xl">My Add</h1>
+            <h1 className="text-3xl font-bold my-5 text-center">{user?.displayName ? user.displayName : 'Your'}'s List</h1>
             <div className="overflow-x-auto">
                 <table className="table table-zebra">
                     {/* head */}

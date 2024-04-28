@@ -19,6 +19,7 @@ import slider4 from '../../assets/footerPic4-1.jpg'
 import slider5 from '../../assets/footerPic5-1.jpg'
 
 import './regSwiper.css'
+import toast from "react-hot-toast";
 
 
 
@@ -41,17 +42,17 @@ const Register = () => {
         console.log(name, email, password, photo);
 
         if (!/^(?=.*[A-Z]).*$/.test(password)) {
-            alert('Password must contain at least one Uppercase Character');
+            toast.error('Password must contain at least one Uppercase Character');
             return;
         }
 
         if (!/^(?=.*[a-z]).*$/.test(password)) {
-            alert('Password must contain at least one Lowercase Character');
+            toast.error('Password must contain at least one Lowercase Character');
             return;
         }
 
         if (!/^.{6,}$/.test(password)) {
-            alert('Password must contain at least six Character');
+            toast.error('Password must contain at least six Character');
             return;
         }
 
@@ -60,7 +61,7 @@ const Register = () => {
                 console.log(result.user);
                 logOutUser();
                 navigate('/login');
-                alert('Registration Successful');
+                toast.success('Registration Successful');
 
                 updateProfile(auth.currentUser, {
                     displayName: name, photoURL: photo
@@ -71,12 +72,15 @@ const Register = () => {
             })
             .catch(err => {
                 console.log(err);
+                if(err.message === 'Firebase: Error (auth/email-already-in-use).'){
+                    toast.error('This email already been used');
+                }
             })
     }
 
 
     return (
-        <div className=" min-h-screen">
+        <div className=" min-h-screen mt-8">
 
             <div className="flex flex-col lg:flex-row-reverse gap-10">
                 <div className="text-center w-1/2">

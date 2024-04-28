@@ -20,6 +20,7 @@ import PrivateRoute from './private/PrivateRoute';
 import UpdatePage from './pages/update/UpdatePage';
 import CountryDetails from './pages/countryDetail/CountryDetails';
 import Error from './pages/err/Error';
+import { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([
   {
@@ -76,5 +77,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
+    <Toaster />
   </React.StrictMode>,
 )

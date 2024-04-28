@@ -26,10 +26,10 @@ const AllSpots = () => {
     console.log(spots);
     return (
         <div>
-            <h1 className="text-3xl">All spots Here</h1>
             <div className="flex flex-col justify-center items-center">
+                <h1 className="text-4xl font-bold text-center mt-6 mb-2">Our Tourist Spots</h1>
                 <div className="dropdown ">
-                    <div tabIndex={0} role="button" className="btn m-1 bg-rose-400 hover:bg-rose-600">Sort By</div>
+                    <div tabIndex={0} role="button" className="btn m-1 bg-rose-400 hover:bg-rose-600 text-white font-bold">Sort By</div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li onClick={handelSort}><a>Average cost</a></li>
                     </ul>

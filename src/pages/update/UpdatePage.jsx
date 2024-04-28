@@ -2,20 +2,21 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../auth/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 
 
 const UpdatePage = () => {
 
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     console.log(user.displayName);
     console.log(user.email);
 
     const loadedSpot = useLoaderData();
     // console.log(loadedSpot);
 
-    const {visitorsPerYear, travelTime, spotName, seasonality, photo, location, counter, avgCost, description, _id}= loadedSpot;
+    const { visitorsPerYear, travelTime, spotName, seasonality, photo, location, counter, avgCost, description, _id } = loadedSpot;
 
     const {
         register,
@@ -31,19 +32,40 @@ const UpdatePage = () => {
 
         fetch(`https://assignment-10-server-rho-nine.vercel.app/spots/${_id}`, {
             method: "PUT",
-            headers:{
+            headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(spot)
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
 
-            if(data.modifiedCount){
-                alert('Spot updated')
-            }
-        })
+                if (data.modifiedCount) {
+                    let timerInterval;
+                    Swal.fire({
+                        title: "Updating...",
+                        html: "Spot will update in <b></b> milliseconds.",
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading();
+                            const timer = Swal.getPopup().querySelector("b");
+                            timerInterval = setInterval(() => {
+                                timer.textContent = `${Swal.getTimerLeft()}`;
+                            }, 100);
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval);
+                        }
+                    }).then((result) => {
+                        /* Read more about handling dismissals below */
+                        if (result.dismiss === Swal.DismissReason.timer) {
+                            console.log("I was closed by the timer");
+                        }
+                    });
+                }
+            })
     }
 
 
