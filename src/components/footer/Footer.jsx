@@ -78,11 +78,11 @@ const Footer = () => {
 
             <div className='grid grid-cols-1 lg:grid-cols-8 md:px-16 py-3'>
                 <h1 className=' lg:col-span-1 text-white flex justify-center items-center gap-2 text-2xl font-bold'>Contact Us :</h1>
-                <h1 className='lg:col-span-2 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-0 gap-2'><FaPhoneAlt className='text-rose-600' /> +1593-648-96</h1>
-                <h1 className=' lg:col-span-2 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-0 gap-2'><MdMarkEmailUnread className='text-rose-600 text-2xl w-10' /> info@trektrove.com</h1>
-                <h1 className='lg:col-span-3 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-0 gap-2'><FaMapMarkerAlt className='text-rose-600 text-2xl' />  2752 Willison Street Eagan, United State</h1>
+                <h1 className='lg:col-span-2 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-6 lg:mb-0 gap-2'><FaPhoneAlt className='text-rose-600' /> +1593-648-96</h1>
+                <h1 className=' lg:col-span-2 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-6 lg:mb-0 gap-2'><MdMarkEmailUnread className='text-rose-600 text-2xl w-10' /> info@trektrove.com</h1>
+                <h1 className='lg:col-span-3 text-white text-xl flex items-center justify-start md:justify-center ml-2 md:ml-0 mb-2 md:mb-16 lg:mb-0 gap-2'><FaMapMarkerAlt className='text-rose-600 text-2xl' />  2752 Willison Street Eagan, United State</h1>
             </div>
-            <div className='absolute md:bottom-0 w-full h-28 md:h-16 bg-zinc-800 grid grid-cols-1 lg:grid-cols-3'>
+            <div className='absolute md:bottom-0 w-full h-28 md:h-16 bg-zinc-800 grid grid-cols-1 md:grid-cols-3'>
                 <h1 className='text-white text-center my-auto' >© Copyright 1986. All Rights Reserved.</h1>
                 <h1 className='text-white text-center my-auto text-4xl font-semibold' >Trek<span className='text-rose-600 font-bold'>Trove</span></h1>
                 <a  className='text-white text-center my-auto' href="">Terms & Condition <span className='text-rose-600'>|</span> Privacy Policy</a>
