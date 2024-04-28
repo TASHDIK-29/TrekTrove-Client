@@ -15,7 +15,7 @@ const MyAdd = () => {
     // console.log(spots);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myAdds/${user?.email}`)
+        fetch(`https://assignment-10-server-rho-nine.vercel.app/myAdds/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data);
@@ -25,7 +25,7 @@ const MyAdd = () => {
 
 
     const handelDelete = id => {
-        fetch(`http://localhost:5000/spots/${id}`, {
+        fetch(`https://assignment-10-server-rho-nine.vercel.app/spots/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

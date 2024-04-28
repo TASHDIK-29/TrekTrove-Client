@@ -13,7 +13,7 @@ const AllSpots = () => {
     }
 
     useEffect( () =>{
-          fetch('http://localhost:5000/sort')
+          fetch('https://assignment-10-server-rho-nine.vercel.app/sort')
           .then(res => res.json())
           .then(data => {
             console.log('sorted', data);

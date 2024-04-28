@@ -12,7 +12,7 @@ const CountryDetails = () => {
     const desh = country.slice(1,country.length);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/countries/${desh}`)
+        fetch(`https://assignment-10-server-rho-nine.vercel.app/countries/${desh}`)
             .then(res => res.json())
             .then(data => {
                 setSpots(data);

@@ -15,7 +15,7 @@ const Home = () => {
     // console.log(countries);
 
     useEffect( () => {
-        fetch('http://localhost:5000/country')
+        fetch('https://assignment-10-server-rho-nine.vercel.app/country')
         .then(res => res.json())
         .then(data => {
             setCountries(data);

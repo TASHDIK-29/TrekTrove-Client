@@ -40,9 +40,11 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 navigate(page);
+                alert('Login Successful');
             })
             .catch(err => {
                 console.log(err);
+                alert('auth/invalid-credential')
             })
     }
 

@@ -30,17 +30,17 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/spots')
+        loader: () => fetch('https://assignment-10-server-rho-nine.vercel.app/spots')
       },
       {
         path: '/allSpots',
         element: <AllSpots></AllSpots>,
-        loader: () => fetch('http://localhost:5000/spots')
+        loader: () => fetch('https://assignment-10-server-rho-nine.vercel.app/spots')
       },
       {
         path: '/allSpots/:id',
         element: <PrivateRoute><DetailCard></DetailCard></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-rho-nine.vercel.app/spots/${params.id}`)
       },
       {
         path: '/addSpots',
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <PrivateRoute><UpdatePage></UpdatePage></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/spots/${params.id}`)
+        loader: ({params}) => fetch(`https://assignment-10-server-rho-nine.vercel.app/spots/${params.id}`)
       },
       {
         path: '/country/:country',

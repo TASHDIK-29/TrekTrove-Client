@@ -34,7 +34,7 @@ const Nav = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to='/'>Home</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to='/allSpots'>All Spots</NavLink>
         <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to='/addSpots'>Add Spots</NavLink>
-        <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to={`/myAdd/${user?.email}`}>My Add</NavLink>
+        <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to={`/myAdd/${user?.email}`}>My List</NavLink>
     </>
     return (
         <div className="navbar bg-base-100 mb-0 mt-2">

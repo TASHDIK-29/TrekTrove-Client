@@ -20,7 +20,7 @@ const AddSpot = () => {
 
         // console.log(spot)
 
-        fetch('http://localhost:5000/spots', {
+        fetch('https://assignment-10-server-rho-nine.vercel.app/spots', {
             method: "POST",
             headers:{
                 'content-type': 'application/json'
@@ -30,6 +30,10 @@ const AddSpot = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+
+            if(data.insertedId){
+                alert('Added successfully')
+            }
         })
     }
 

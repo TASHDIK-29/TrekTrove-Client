@@ -40,11 +40,27 @@ const Register = () => {
 
         console.log(name, email, password, photo);
 
+        if (!/^(?=.*[A-Z]).*$/.test(password)) {
+            alert('Password must contain at least one Uppercase Character');
+            return;
+        }
+
+        if (!/^(?=.*[a-z]).*$/.test(password)) {
+            alert('Password must contain at least one Lowercase Character');
+            return;
+        }
+
+        if (!/^.{6,}$/.test(password)) {
+            alert('Password must contain at least six Character');
+            return;
+        }
+
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
                 logOutUser();
                 navigate('/login');
+                alert('Registration Successful');
 
                 updateProfile(auth.currentUser, {
                     displayName: name, photoURL: photo

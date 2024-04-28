@@ -29,7 +29,7 @@ const UpdatePage = () => {
         spot.intAvgCost = intAvgCost;
         console.log(spot)
 
-        fetch(`http://localhost:5000/spots/${_id}`, {
+        fetch(`https://assignment-10-server-rho-nine.vercel.app/spots/${_id}`, {
             method: "PUT",
             headers:{
                 'content-type': 'application/json'
@@ -39,6 +39,10 @@ const UpdatePage = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+
+            if(data.modifiedCount){
+                alert('Spot updated')
+            }
         })
     }
 
