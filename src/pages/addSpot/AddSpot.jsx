@@ -14,7 +14,11 @@ const AddSpot = () => {
     } = useForm()
 
     const onSubmit = (spot) => {
-        console.log(spot)
+        
+        const intAvgCost = parseInt(spot.avgCost);
+        spot.intAvgCost = intAvgCost;
+
+        // console.log(spot)
 
         fetch('http://localhost:5000/spots', {
             method: "POST",

@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
 import noImg from "../../assets/user.png"
+import Toggle from "../dark/Toggle";
 
 const Nav = () => {
 
@@ -55,7 +56,10 @@ const Nav = () => {
             </div>
             <div className="navbar-end">
                 {/* <div><h1>{user.email}</h1></div> */}
-                <div className="space-x-2">
+                <div className="space-x-2 flex items-center justify-between">
+                    <div>
+                        <Toggle></Toggle>
+                    </div>
                     { user ?
                         <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut} className="w-16 h-16 mr-10">
                             <img className="mx-auto my-auto w-14 rounded-full mr-16" src={user?.photoURL ? user?.photoURL : noImg} alt="" />

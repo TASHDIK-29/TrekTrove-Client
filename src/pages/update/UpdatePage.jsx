@@ -13,7 +13,8 @@ const UpdatePage = () => {
     console.log(user.email);
 
     const loadedSpot = useLoaderData();
-    console.log(loadedSpot);
+    // console.log(loadedSpot);
+
     const {visitorsPerYear, travelTime, spotName, seasonality, photo, location, counter, avgCost, description, _id}= loadedSpot;
 
     const {
@@ -23,6 +24,9 @@ const UpdatePage = () => {
     } = useForm()
 
     const onSubmit = (spot) => {
+
+        const intAvgCost = parseInt(spot.avgCost);
+        spot.intAvgCost = intAvgCost;
         console.log(spot)
 
         fetch(`http://localhost:5000/spots/${_id}`, {
