@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../auth/AuthProvider";
 import Swal from "sweetalert2";
@@ -9,6 +9,9 @@ const AddSpot = () => {
     useEffect(() => {
         window.scroll(0, 0);
     }, []);
+
+
+    const formRef = useRef(null);
 
     const { user } = useContext(AuthContext);
     // console.log(user.displayName);
@@ -37,6 +40,8 @@ const AddSpot = () => {
             .then(data => {
                 console.log(data);
 
+                
+
                 if (data.insertedId) {
                     // alert('Added successfully')
 
@@ -64,13 +69,16 @@ const AddSpot = () => {
                             toast.success('Successfully Updated !')                        }
                     });
                 }
+
+                formRef.current.reset();
+
             })
     }
 
 
     return (
         <section className="p-6 dark:bg-gray-100 dark:text-gray-900">
-            <form onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12">
+            <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="container flex flex-col mx-auto space-y-12">
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-50">
                     <div className="space-y-2 col-span-full lg:col-span-1">
                         <p className="font-medium">HEY , <span className="text-3xl font-bold text-rose-600">{user?.displayName}</span></p>
