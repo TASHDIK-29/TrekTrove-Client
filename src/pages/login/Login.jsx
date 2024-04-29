@@ -78,7 +78,7 @@ const Login = () => {
         <div className=" min-h-screen">
 
             <div className="flex flex-col lg:flex-row-reverse gap-10 p-6">
-                <div className="text-center w-1/2">
+                <div className="text-center lg:w-1/2">
                     <Swiper
                         effect={'coverflow'}
                         centeredSlides={true}
@@ -114,10 +114,10 @@ const Login = () => {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div className="card shrink-0 w-2/5 p-3 border border-rose-400 rounded-md  bg-base-100">
+                <div className="card shrink-0 lg:w-2/5 p-3 border border-rose-400 rounded-md  bg-base-100">
                     <div className="text-center mb-8">
                         <h1 className="text-5xl font-bold text-rose-600">Login Now!</h1>
-                        
+
                     </div>
                     <hr />
                     <form onSubmit={handelLogin} className="card-body">
@@ -140,8 +140,8 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="md:flex justify-between">
-                        <button onClick={handelGoogle} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-blue-600 mb-3"><FaGoogle className="text-blue-600" />Sign in With Google</button>
-                        <button onClick={handelGitHub} className="border border-gray-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center w-2/5 mx-auto text-bs font-bold text-gray-600 mb-3"><FaGithub className="text-gray-600" />Sign in With Github</button>
+                        <button onClick={handelGoogle} className="border border-blue-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center md:w-2/5 mx-auto text-bs font-bold text-blue-600 mb-3"><FaGoogle className="text-blue-600" />Sign in With Google</button>
+                        <button onClick={handelGitHub} className="border border-gray-500 rounded-lg py-1 px-1 flex gap-4 items-center justify-center md:w-2/5 mx-auto text-bs font-bold text-gray-600 mb-3"><FaGithub className="text-gray-600" />Sign in With Github</button>
                     </div>
 
                     <p className="text-center mb-2">Have no account? please <Link to='/register' className="text-rose-600 font-bold text-lg text-center">Register</Link></p>

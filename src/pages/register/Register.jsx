@@ -83,7 +83,7 @@ const Register = () => {
         <div className=" min-h-screen mt-8">
 
             <div className="flex flex-col lg:flex-row-reverse gap-10">
-                <div className="text-center w-1/2">
+                <div className="text-center lg:w-1/2">
                     <Swiper
                         effect={'coverflow'}
                         centeredSlides={true}
@@ -119,7 +119,7 @@ const Register = () => {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div className="card shrink-0 w-2/5 p-4 border border-rose-600 rounded-md  bg-base-100 ">
+                <div className="card shrink-0 lg:w-2/5 p-4 border border-rose-600 rounded-md  bg-base-100 ">
                     <div className="text-center mb-8">
                         <h1 className="text-5xl font-bold text-rose-600">Register Now!</h1>
                     </div>
