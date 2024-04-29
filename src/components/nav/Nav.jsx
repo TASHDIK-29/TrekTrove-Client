@@ -65,12 +65,16 @@ const Nav = () => {
                             <div className="flex flex-col justify-center items-center border-2 border-rose-600 w-16 h-16 rounded-full p-1">
                                 <img className="mx-auto w-16 h-16 rounded-full mr-16" src={user?.photoURL ? user?.photoURL : noImg} alt="" />
                             </div>
-                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border border-rose-500 rounded-lg p-3 z-50`}>
+                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border-2 border-rose-500 rounded-lg p-3 z-50`}>
                                 <h1 className="text-xl text-red-500 font-semibold">{user.displayName ? user.displayName : "Username not found"}</h1>
                                 <hr />
-                                <Link to='/login' className="flex items-center">
-                                    <button onClick={handelLogout} className=" py-2 px-4 text-rose-600 font-bold">Logout</button>
-                                    <LuLogOut className="text-rose-600 font-bold" />
+                                {/* <Link to='/login' className="flex items-center border hover:bg-rose-600">
+                                    <button onClick={handelLogout} className=" py-2 px-4 text-rose-600 font-bold hover:text-white">Logout</button>
+                                    <LuLogOut className="text-rose-600 font-bold hover:text-white" />
+                                </Link> */}
+                                <Link to='/login' onClick={handelLogout} className="flex justify-around items-center rounded-md font-bold hover:bg-rose-600 text-rose-600 hover:text-white py-2 px-4">
+                                Logout
+                                    <LuLogOut className="" />
                                 </Link>
                             </div>
                         </div>
