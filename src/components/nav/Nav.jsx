@@ -39,7 +39,7 @@ const Nav = () => {
         <NavLink className={({ isActive }) => isActive ? 'text-lg text-rose-700 font-bold my-3' : 'text-lg dark:text-gray-600 font-bold my-3'} to={`/myAdd/${user?.email}`}>My List</NavLink>
     </>
     return (
-        <div className="navbar bg-base-100 mb-0 mt-2 flex flex-col md:flex-row">
+        <div className="navbar bg-base-100 mb-0 mt-2 flex gap-4 items-center">
             <div className="navbar-start w-full md:w-3/5">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -56,8 +56,8 @@ const Nav = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end  w-full md:w-2/3 flex justify-center md:justify-end space-y-2">
-                {/* <div><h1>{user.email}</h1></div> */}
+            <div className="navbar-end  w-full md:w-2/3 flex justify-end  space-y-2">
+                
                 <div className="space-x-2 flex items-center justify-center">
 
                     {user ?
@@ -72,7 +72,7 @@ const Nav = () => {
                                 </Link>
                             </div>
                         </div>
-                        : <div className="space-x-4">
+                        : <div className="space-x-4 flex flex-col md:flex-row justify-center items-center gap-2">
                             <Link to='/login' className="relative inline-block text-lg group">
                                 <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-rose-800 transition-colors duration-300 ease-out border-2 border-rose-700 rounded-lg group-hover:text-white">
                                     <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-rose-50"></span>
