@@ -44,11 +44,11 @@ const Banner = () => {
                                 <span className="text-rose-600">
                                     {/* {text} */}
                                     <Typewriter
-                                        words={['Charm', 'Memories']}
+                                        words={['Charm', 'Glory']}
                                         loop={0}
                                         cursor
                                         cursorStyle='|'
-                                        typeSpeed={20}
+                                        typeSpeed={100}
                                         deleteSpeed={50}
                                         delaySpeed={1000}
                                     // onLoopDone={handleDone}
@@ -73,11 +73,11 @@ const Banner = () => {
                                 <span className="text-rose-600">
                                     {/* {text} */}
                                     <Typewriter
-                                        words={['Charm', 'Memories']}
+                                        words={['Charm', 'Glory']}
                                         loop={0}
                                         cursor
                                         cursorStyle='|'
-                                        typeSpeed={20}
+                                        typeSpeed={100}
                                         deleteSpeed={50}
                                         delaySpeed={1000}
                                     // onLoopDone={handleDone}
@@ -101,11 +101,11 @@ const Banner = () => {
                                 <span className="text-rose-600">
                                     {/* {text} */}
                                     <Typewriter
-                                        words={['Charm', 'Memories']}
+                                        words={['Charm', 'Glory']}
                                         loop={0}
                                         cursor
                                         cursorStyle='|'
-                                        typeSpeed={20}
+                                        typeSpeed={100}
                                         deleteSpeed={50}
                                         delaySpeed={1000}
                                     // onLoopDone={handleDone}

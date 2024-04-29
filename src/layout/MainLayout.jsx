@@ -5,13 +5,15 @@ import Toggle from "../components/dark/Toggle";
 
 const MainLayout = () => {
     return (
-        <div>
+        <div >
             <Nav></Nav>
             <div>
                 <Toggle></Toggle>
             </div>
-           <Outlet></Outlet>
-           <Footer></Footer>
+            <div className="px-1">
+                <Outlet></Outlet>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };
