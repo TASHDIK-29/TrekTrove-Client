@@ -46,8 +46,8 @@ const Login = () => {
             })
             .catch(err => {
                 console.log(err);
-                alert('auth/invalid-credential')
-                toast.error('auth/invalid-credential')
+                
+                toast.error('auth/invalid-credential');
             })
     }
 

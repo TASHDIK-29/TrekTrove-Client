@@ -5,7 +5,7 @@ import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-
+import { FaUserEdit } from "react-icons/fa";
 
 const MyAdd = () => {
 
@@ -74,10 +74,10 @@ const MyAdd = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th className="text-lg font-semibold">Spot Name</th>
-                            <th className="text-lg font-semibold">Country</th>
-                            <th className="text-lg font-semibold">Average Cost</th>
-                            <th className="text-lg font-semibold">visitors Per Year</th>
+                            <th className="text-xl font-semibold">Spot Name</th>
+                            <th className="text-xl font-semibold">Country</th>
+                            <th className="text-xl font-semibold">Average Cost</th>
+                            <th className="text-xl font-semibold">Visitors Per Year</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -86,22 +86,22 @@ const MyAdd = () => {
                         {/* row 1 */}
                         {
                             spots.map((spot, idx) => <tr key={idx}>
-                                <th>{idx + 1}</th>
-                                <td>{spot.spotName}</td>
-                                <td>{spot.counter}</td>
-                                <td>{spot.avgCost}</td>
-                                <td>{spot.visitorsPerYear}</td>
+                                <th className="text-lg font-normal">{idx + 1}</th>
+                                <td className="text-lg font-normal">{spot.spotName}</td>
+                                <td className="text-lg font-normal">{spot.counter}</td>
+                                <td className="text-lg font-normal">{spot.avgCost}</td>
+                                <td className="text-lg font-normal">{spot.visitorsPerYear}</td>
                                 <td>
                                     <button>
                                         <Link to={`/update/${spot._id}`}
-                                            data-tooltip-id="update" data-tooltip-content="Update"><MdOutlineTipsAndUpdates className="text-xl text-rose-600 font-bold" /></Link>
+                                            data-tooltip-id="update" data-tooltip-content="Update"><FaUserEdit className="text-2xl text-rose-600 font-bold" /></Link>
                                         <Tooltip id="update"
                                             place="top"
                                         />
                                     </button>
                                 </td>
                                 <td>
-                                    <button data-tooltip-id="delete" data-tooltip-content="Delete" onClick={() => handelDelete(spot._id)}><MdOutlineDeleteForever className="text-xl text-rose-600 font-bold" /></button>
+                                    <button data-tooltip-id="delete" data-tooltip-content="Delete" onClick={() => handelDelete(spot._id)}><MdOutlineDeleteForever className="text-3xl text-rose-600 font-bold" /></button>
                                     <Tooltip id="delete" />
                                 </td>
                             </tr>)

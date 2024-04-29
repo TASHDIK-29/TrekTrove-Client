@@ -57,16 +57,18 @@ const Nav = () => {
                 </ul>
             </div>
             <div className="navbar-end  w-full md:w-2/3 flex justify-end  space-y-2">
-                
+
                 <div className="space-x-2 flex items-center justify-center">
 
                     {user ?
-                        <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut} className="w-16 h-16 mr-10">
-                            <img className="mx-auto my-auto w-14 rounded-full mr-16" src={user?.photoURL ? user?.photoURL : noImg} alt="" />
-                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border border-rose-500 rounded-lg p-4 z-50`}>
+                        <div onMouseOver={handelMouseHover} onMouseOut={handelMouseOut} className="w-20 h-20 mr-10">
+                            <div className="flex flex-col justify-center items-center border-2 border-rose-600 w-16 h-16 rounded-full p-1">
+                                <img className="mx-auto w-16 h-16 rounded-full mr-16" src={user?.photoURL ? user?.photoURL : noImg} alt="" />
+                            </div>
+                            <div className={`absolute duration-200 delay-1000 ${hover ? 'top-15 right-12' : '-top-80'} space-y-2 border border-rose-500 rounded-lg p-3 z-50`}>
                                 <h1 className="text-xl text-red-500 font-semibold">{user.displayName ? user.displayName : "Username not found"}</h1>
-                                <hr className="mb-6" />
-                                <Link to='/login' className="flex items-center mt-4">
+                                <hr />
+                                <Link to='/login' className="flex items-center">
                                     <button onClick={handelLogout} className=" py-2 px-4 text-rose-600 font-bold">Logout</button>
                                     <LuLogOut className="text-rose-600 font-bold" />
                                 </Link>
