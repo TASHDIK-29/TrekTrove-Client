@@ -9,6 +9,10 @@ import Review from "../../components/review/Review";
 
 const Home = () => {
 
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
+
     const spots = useLoaderData();
 
     const [countries, setCountries] = useState([]);

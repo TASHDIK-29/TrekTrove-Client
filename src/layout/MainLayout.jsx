@@ -4,6 +4,8 @@ import Footer from "../components/footer/Footer";
 import Toggle from "../components/dark/Toggle";
 
 const MainLayout = () => {
+
+
     return (
         <div >
             <Nav></Nav>

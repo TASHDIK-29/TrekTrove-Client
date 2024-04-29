@@ -1,9 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form"
 import { AuthContext } from "../../auth/AuthProvider";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 const AddSpot = () => {
+
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
 
     const { user } = useContext(AuthContext);
     // console.log(user.displayName);
@@ -56,8 +61,7 @@ const AddSpot = () => {
                     }).then((result) => {
                         /* Read more about handling dismissals below */
                         if (result.dismiss === Swal.DismissReason.timer) {
-                            console.log("I was closed by the timer");
-                        }
+                            toast.success('Successfully Updated !')                        }
                     });
                 }
             })

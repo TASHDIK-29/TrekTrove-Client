@@ -4,6 +4,10 @@ import SpotCard from "../../components/spotCard/SpotCard";
 
 const CountryDetails = () => {
 
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
+
     const [spots, setSpots] = useState([]);
 
     const {country} = useParams();

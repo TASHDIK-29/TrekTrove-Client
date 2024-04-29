@@ -9,6 +9,10 @@ import { FaUserEdit } from "react-icons/fa";
 
 const MyAdd = () => {
 
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
+
     const { user } = useContext(AuthContext);
     // console.log(user);
 

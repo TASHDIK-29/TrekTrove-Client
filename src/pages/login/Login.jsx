@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
@@ -21,6 +21,10 @@ import './swiper.css'
 import toast from "react-hot-toast";
 
 const Login = () => {
+
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
 
     const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
 

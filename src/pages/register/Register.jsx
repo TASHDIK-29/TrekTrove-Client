@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../auth/AuthProvider";
 import { updateProfile } from "firebase/auth";
@@ -25,6 +25,10 @@ import toast from "react-hot-toast";
 
 
 const Register = () => {
+
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
 
     const { createUser, logOutUser } = useContext(AuthContext);
     const navigate = useNavigate();

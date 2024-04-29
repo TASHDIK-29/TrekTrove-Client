@@ -1,8 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { Bounce, Fade } from "react-awesome-reveal";
+import { useEffect } from "react";
 
 const DetailCard = () => {
+
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
 
     const spot = useLoaderData();
     console.log(spot);
@@ -31,8 +36,8 @@ const DetailCard = () => {
                             <h3 className="text-base font-medium">Seasonality : <span className="text-xl font-bold text-rose-600">{seasonality}</span></h3>
                         </div>
                         <div className="md:flex justify-around">
-                            <h3>Visitors : <span className="text-xl font-bold text-rose-600">{visitorsPerYear}</span> per year</h3>
-                            <h3>Travel Time : <span className="text-xl font-bold text-rose-600">{travelTime}</span></h3>
+                            <h3 className="text-base font-medium">Visitors : <span className="text-xl font-bold text-rose-600">{visitorsPerYear}</span> per year</h3>
+                            <h3 className="text-base font-medium">Travel Time : <span className="text-xl font-bold text-rose-600">{travelTime}</span></h3>
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold">Added by : <span className="text-xl font-bold text-rose-600">{userName}</span></h3>

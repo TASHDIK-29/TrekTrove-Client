@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 const AllSpots = () => {
 
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
+
     const [sortedSpots, setSortedSpots] = useState([]);
 
     const [toggle, setToggle] = useState(false);
