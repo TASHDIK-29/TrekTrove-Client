@@ -70,10 +70,12 @@ const Login = () => {
         githubLogin()
             .then(result => {
                 navigate(page);
+
+                toast.success('Login Successful')
             })
             .catch(err => {
                 console.log(err);
-                toast.success('Login Successful')
+                
             })
     }
 

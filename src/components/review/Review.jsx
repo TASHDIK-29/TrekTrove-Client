@@ -1,5 +1,8 @@
 import { FaStar } from "react-icons/fa6";
 import img1 from '../../assets/member5-1.jpg'
+import img2 from '../../assets/member1-1.jpg'
+import img3 from '../../assets/member3-1.jpg'
+import img4 from '../../assets/member7-1.jpg'
 
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -69,7 +72,7 @@ const Review = () => {
                         <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
                             <div className="relative h-20">
                                 <div className="absolute -top-6 left-24 w-24 h-24 rounded-full">
-                                    <img className="w-full h-full rounded-full" src={img1} alt="" />
+                                    <img className="w-full h-full rounded-full" src={img3} alt="" />
                                 </div>
                             </div>
                             <p className="text-white mb-3 flex-grow">Cox's Bazar exceeded all expectations! The pristine beach, vibrant culture, and delicious seafood made for an unforgettable trip. Perfect for relaxation and exploration. Can't wait to return!</p>
@@ -90,7 +93,7 @@ const Review = () => {
                         <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
                             <div className="relative h-20">
                                 <div className="absolute -top-6 left-24 w-24 h-24 rounded-full">
-                                    <img className="w-full h-full rounded-full" src={img1} alt="" />
+                                    <img className="w-full h-full rounded-full" src={img2} alt="" />
                                 </div>
                             </div>
                             <p className="text-white mb-3 flex-grow">Rangamati's serene beauty stole my heart. The tranquil lakes, lush hills made for a truly peaceful escape. A must-visit for anyone seeking tranquility amidst nature's wonders.</p>
@@ -111,7 +114,7 @@ const Review = () => {
                         <div className=" rounded-xl p-6 relative  bg-slate-300/25 flex flex-col">
                             <div className="relative h-20">
                                 <div className="absolute -top-6 left-24 w-24 h-24 rounded-full">
-                                    <img className="w-full h-full rounded-full" src={img1} alt="" />
+                                    <img className="w-full h-full rounded-full" src={img4} alt="" />
                                 </div>
                             </div>
                             <p className="text-white mb-3 flex-grow">Kuakata's sunset views were simply magical! The long beach, fresh seafood made our stay unforgettable. A hidden gem for those seeking beauty off the beaten path.</p>
