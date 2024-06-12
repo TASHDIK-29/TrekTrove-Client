@@ -1,11 +1,12 @@
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import TouristSpots from "../../components/touristSpot/TouristSpots";
 import { useLoaderData } from "react-router-dom";
 import Countries from "../../components/country/Countries";
 import TourGuide from "../../components/guide/TourGuide";
 import Review from "../../components/review/Review";
+import { AuthContext } from "../../auth/AuthProvider";
 
 const Home = () => {
 
