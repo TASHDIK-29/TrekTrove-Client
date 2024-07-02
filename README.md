@@ -2,7 +2,7 @@
 
 Live Link : https://trektrove-a10.web.app/
 
-# Features
+## Features
 
 * Comprehensive Destination Guides: Explore detailed guides to iconic destinations across South Asia, featuring insider tips, must-see attractions, and cultural insights.
 
@@ -15,6 +15,6 @@ Live Link : https://trektrove-a10.web.app/
 * Community Engagement: Engage with local communities and support sustainable tourism initiatives through our partnerships with responsible tour operators and social enterprises, contributing to positive impact.
 
 
-# Category
+## Category
 
 * Southeast Asia
