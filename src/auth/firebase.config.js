@@ -8,17 +8,6 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAzX841Dqgfq6TlpWT3qNmn0FXiU4PFHEA",
-//   authDomain: "trektrove-a10.firebaseapp.com",
-//   projectId: "trektrove-a10",
-//   storageBucket: "trektrove-a10.appspot.com",
-//   messagingSenderId: "495984856061",
-//   appId: "1:495984856061:web:ff6fd6bc9f4befa2296794"
-// };
-
-
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_apiKey,
   authDomain: import.meta.env.VITE_authDomain,
