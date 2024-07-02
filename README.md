@@ -21,7 +21,7 @@ Live Link : https://trektrove-a10.web.app/
 
 * React.js
 * JavaScript
-* TailWind Css
+* Tailwind CSS
 * Firebase 
 
 ## Run At Local Machine
