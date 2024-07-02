@@ -17,7 +17,6 @@ Live Link : https://trektrove-a10.web.app/
 * Community Engagement: Engage with local communities and support sustainable tourism initiatives through our partnerships with responsible tour operators and social enterprises, contributing to positive impact.
 
 
-<<<<<<< HEAD
 # Technologies
 
 * React.js
@@ -31,8 +30,3 @@ Live Link : https://trektrove-a10.web.app/
 * Instal npm packages - npm i
 * Set up a  project at firebase.
 * Make env.local file for environment variable for firebase config keys.
-=======
-## Category
-
-* Southeast Asia
->>>>>>> a8725baa275738298f3d4088875d10ca3b32bfe0
