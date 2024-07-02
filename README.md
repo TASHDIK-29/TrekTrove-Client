@@ -17,14 +17,14 @@ Live Link : https://trektrove-a10.web.app/
 * Community Engagement: Engage with local communities and support sustainable tourism initiatives through our partnerships with responsible tour operators and social enterprises, contributing to positive impact.
 
 
-## Technologies
+# Technologies
 
 * React.js
 * JavaScript
 * TailWind Css
 * Firebase 
 
-## Run At Local Machine
+# Run At Local Machine
 
 * Clone - https://github.com/TASHDIK-29/TrekTrove-Client.git
 * Instal npm packages - npm i
